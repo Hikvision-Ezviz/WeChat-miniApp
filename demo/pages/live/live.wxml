@@ -1,0 +1,139 @@
+<view class="page-live">
+	<view class="video-container">
+		<live-player id="livePlayer" binderror="error" bindstatechange="statechange" mode="RTC" src="{{isHD ? videoHDSrc :videoSrc}}"  catchtap="onVideoTap" muted="{{!openSound}}" class="{{fullScreen ? 'video-item full-screen' :'video-item'}}" bindfullscreenchange="{{fullscreenChange}}" object-fit="{{objectFit}}">
+			<!-- loading状态 -->
+			<cover-view class="video-loading-container" catchtap="onVideoTap" hidden="{{videoLoadingStatus === 100}}">
+				<cover-image class="video-loading-bg" src="./images/live/live_loading_bg.png"></cover-image>
+				<!-- 停止状态 -->
+				<cover-view class="video-loaing video-ready" hidden="{{videoLoadingStatus !== 0}}">
+					<cover-image class="loading-gif" src="./images/live/landscape_play.png" catchtap="handlePlay"></cover-image>
+				</cover-view>
+				<!-- 加载资源中状态 -->
+				<cover-view class="video-loaing" hidden="{{videoLoadingStatus === 0 || videoNetWorkError}}">
+					<cover-image class="loading-gif" src="./images/live/loading_grey.gif"></cover-image>
+					<cover-view class="video-loading-text">视频安全传输中...{{videoLoadingStatus}}%</cover-view>
+				</cover-view>
+			</cover-view>
+				<!-- 开启隐私遮蔽状态 -->
+			<cover-view class="video-loading-container" hidden="{{!(panelStatus == 4)}}">
+				<cover-image class="video-loading-bg" src="./images/live/live_loading_bg.png"></cover-image>
+				<cover-view class="video-loaing">
+					<cover-image class="loading-gif" src="./images/live/preview_fail_yinsi.png"></cover-image>
+					<cover-view class="video-loading-text">已开启隐私遮蔽</cover-view>
+				</cover-view>
+			</cover-view>
+			<!-- 加载资源失败状态 -->
+			<cover-view class="video-loading-container" hidden="{{ !videoNetWorkError}}">
+				<cover-image class="video-loading-bg" src="./images/live/live_loading_bg.png"></cover-image>
+				<cover-view class="video-loaing">
+					<cover-image class="loading-gif" src="./images/live/preview_fail.png"></cover-image>
+					<cover-view class="video-loading-text">网络不稳定，加载失败</cover-view>
+					<cover-view class="video-loading-text reTry" ontap="handlePlay">重试</cover-view>
+				</cover-view>
+			</cover-view>
+			<!-- 设备不在线状态 -->
+			<cover-view class="video-loading-container" hidden="{{!deviceOffline}}">
+				<cover-image class="video-loading-bg" src="./images/live/live_loading_bg.png"></cover-image>
+				<cover-view class="video-loaing">
+					<cover-image class="loading-gif" src="./images/live/preview_fail_offline.png"></cover-image>
+					<cover-view class="video-loading-text">设备不在线</cover-view>
+					<cover-view class="video-loading-text">离线时间：{{deviceOfflineTime}}</cover-view>
+				</cover-view>
+			</cover-view>
+			<!-- 清晰度 -->
+			<cover-view class="{{showHDSelect ? 'hd-select' : 'hd-select hide'}}">
+				<cover-view class="{{isHD ? 'hd-option active': 'hd-option'}}" catchtap="changeVideoHD">高清</cover-view>
+				<cover-view class="{{!isHD ? 'hd-option active': 'hd-option'}}" catchtap="changeVideoNormal">标清</cover-view>
+			</cover-view>
+			<!-- 竖屏模式 -->
+			<cover-view class="{{fullScreen ? 'hidden' : ''}} video-controls-container">
+			</cover-view>
+			<cover-view class="{{(fullScreen || !showVideoControls)  ? 'hidden' : ''}} video-controls-container">
+				<cover-image class="controls-img" src='{{playVideo ? "./images/video_icon_stop.png":"./images/video_icon_play.png"}}' catchtap="{{playVideo ? 'handleStop': 'handlePlay'}}"></cover-image>
+				<cover-image class="controls-img" src='{{!openSound ? "./images/video_icon_closesound.png":"./images/video_icon_opensound.png"}}' catchtap="handleSound"></cover-image>
+				<cover-image class="controls-img hd" src="{{isHD ? './images/video_icon_hd.png' : './images/video_icon_bq.png' }}" catchtap="handleHD">
+				</cover-image>
+				<cover-image class="controls-img" catchtap="fullScreen" src="./images/video_icon_full.png"></cover-image>
+			</cover-view>
+			<!-- 横屏模式 -->
+			<cover-view class="{{!fullScreen ? 'hidden' : '' }}' video-back-container">
+				<cover-image class="back-img" src="./images/nav_icon_back_full.png" catchtap="unfullScreen"></cover-image>
+				<cover-view class="back-device">{{deviceName}}</cover-view>
+			</cover-view>
+			<cover-view class="{{(!fullScreen || !showVideoControls) ? 'hidden' : '' }}' video-controls-container">
+				<cover-image class="controls-img" src='{{playVideo ? "./images/live_icon_stop_full.png":"./images/live_icon_play_full.png"}}' catchtap="{{playVideo ? 'handleStop' : 'handlePlay'}}"></cover-image>
+				<cover-image class="controls-img" src='{{!openSound ? "./images/live_icon_unsound_full.png":"./images/live_icon_sound_full.png"}}' catchtap="handleSound"></cover-image>
+				<cover-image class="controls-img" catchtap="ToggleObjectFit" src="./images/live_icon_adapt_full.png"></cover-image>
+			</cover-view>
+		<!-- 云台超限 -->
+			<!-- <cover-image class="ptz-limit right" src="./images/yuntai/ptz_limit_right.jpg">
+			</cover-image> -->
+			<cover-view class="ptz-limit {{ptzLimit ? ptzLimit : 'hidden'}}"></cover-view>
+		</live-player>
+
+	</view>
+	<view class="controls-container">
+		<view class="controls-item" catchtap="screenShoot">
+      <image class="item-img" src="{{(playVideo && videoLoadingStatus == 100) ? './images/preview_cut_normal.png' : './images/preview_cut_disable.png'}}"></image>
+      <text class="{{(playVideo && videoLoadingStatus == 100) ? 'item-text' : 'item-text disabled'}}" >截屏</text>
+    </view>
+    <button class="controls-item" open-type="share">
+      <image class="item-img" src="./images/preview_share_normal.png"></image>
+      <text class="item-text" >分享</text>
+    </button>
+	</view>
+	<!-- <view catchtap="startRecord">开始录音</view>
+  <view catchtap="stopRecord">结束录音</view> -->
+	<view hidden="{{panelStatus == 1 || panelStatus == 2}}">
+		<view class="panel-container">
+			<view wx:for="{{list}}" wx:key="id">
+				<view class="panel-item" data-value="{{item.id}}" catchtap="tapPanel">
+					<view class="panel-imgage-container">
+						<image class="panel-image" src="{{item.status === 0 ? item.normalPath: (item.status === 1 ? item.activePath : item.disablePath)}}"></image>
+					</view>
+					<view class="panel-name">{{item.name}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view hidden="{{panelStatus !== 1}}" class="ptz-container">
+		<view class="close">
+			<image catchtap="handleBackPanel" class="close-img" src="./images/yuntai/close.png"></image>
+		</view>
+		<view class="ptz-img-container" id="ptz-img-container" catchtouchstart="handlePtzTouchStart" catchtouchend="handlePtzTouchEnd">
+			<image class="ptz-img" src="{{currentPtzImg}}"></image>
+		</view>
+	</view>
+	<view class="voice-container" hidden="{{panelStatus !==2}}">
+		<view class="close">
+			<image catchtap="handleBackPanel" class="close-img" src="./images/yuntai/close.png"></image>
+		</view>
+		<view class="voice-list-title">默认语音</view>
+		<scroll-view class="scroll-view" enable-flex="true" scroll-y="true" style="height:100px;" bindscrolltolower="defaultScrollLower">
+			<view wx:for="{{defaultVoiceList}}" wx:key="fileUrl" class="voice-list-container">
+				<view class="voice-list-item" catchtap="playVoice" data-value="{{item}}" data-type="default">
+					<view class="name"> {{item.voiceName}}</view>
+					<image class="gif" src="{{activeDefaultVoiceName == item.voiceName ? './images/voice.gif' : './images/voice_normal.png'}}"></image>
+				</view>
+			</view>
+			<view class="list-loading" hidden="{{!defaultVoiceListLoading}}">正在载入更多...</view>
+			<view class="list-loading" hidden="{{(defaultVoiceListLoading || !defaultVoiceNoMore)}}">已加载全部</view>
+		</scroll-view>
+		<view class="voice-list-title">录制语音</view>
+		<scroll-view  class="scroll-view" enable-flex="true" scroll-y="true" style="height:100px" bindscrolltolower="customScrollLower">
+			<view wx:for="{{customVoiceList}}" wx:key="fileUrl" class="voice-list-container">
+				<view class="voice-list-item" catchtap="playVoice" data-value="{{item}}"  data-type="custom">
+					<view class="name"> {{item.voiceName}}</view>
+					<image class="gif" src="{{activeCustomVoiceName == item.voiceName ? './images/voice.gif' : './images/voice_normal.png'}}"></image>
+				</view>
+			</view>
+			<view class="list-loading" hidden="{{!customVoiceListLoading}}">正在载入更多...</view>
+			<view class="list-loading" hidden="{{(customVoiceListLoading || !customVoiceNoMore)}}">已加载全部</view>
+		</scroll-view>
+		<button class="btn primary" disabled="{{sendingOnceVoice}}" catchtouchstart="speakStart" catchtouchend="speakEnd">{{ sendingOnceVoice ? '请稍后...' : (recoderTime === 60 ? '按住说话': '松开结束')}}</button>
+	</view>
+  <!-- 模态框 -->
+  <mp-dialog title="{{dialogTitle}}" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+    <view>{{dialogContent}}</view>
+  </mp-dialog>
+</view>

@@ -1,0 +1,80 @@
+.page-experience-device .custom-nav{
+  margin-top: 30px;
+  padding: 0 30px;
+}
+.page-experience-device .custom-nav .btn {
+  background: #4C80F7;
+  box-shadow: 0 5px 21px 0 rgba(0,0,0,0.05);
+  border-radius: 8px;
+  height: 46px;
+  line-height: 46px;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+.page-experience-device .custom-device-hint {
+  font-size: 14px;
+  color: #999999;
+  letter-spacing: 0;
+  line-height: 14px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 18px;
+}
+.page-experience-device .video-title {
+  padding-left: 30px;
+  font-size: 16px;
+  color: #333333;
+  letter-spacing: 0.19px;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+.page-experience-device .video-container {
+  display: flex;
+  height: calc(100vh - 200px);
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap:wrap;
+  padding: 0 30px;
+}
+.video-item {
+  display: inline-block;
+  width: 166px;
+  height: 162px;
+  text-align: center;
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.03);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.video-imgage-container {
+  position: relative;
+}
+.video-imgage-container .video-image{
+  width: 166px;
+  height: 112px;
+  background: #333333;
+  vertical-align: top;
+}
+.video-imgage-container .video-play{
+  position: absolute;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  top:43px;
+  left: 70px;
+  z-index: 100;
+
+}
+
+.video-container .video-item .video-name {
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+  color: #333333;
+  letter-spacing: 0;
+  text-align: left;
+  padding: 0 10px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}

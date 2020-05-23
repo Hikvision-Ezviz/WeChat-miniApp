@@ -1,0 +1,104 @@
+@import "../component/imageShow/imageShow.wxss";
+@import "../component/imageList/imageList.wxss";
+.selectImageBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 40px;
+  width: 100%;
+  /* height: 325px; */
+  background: #f5f5f5;
+}
+
+.selectImageButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 80px;
+  background: #f5f5f5;
+}
+
+.selectImageButtons button {
+  font-size: 18px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 32px;
+  border: 1px solid #458fff;
+  color: #458fff;
+  background-color: transparent;
+}
+
+.selectImageItem {
+  width: 144px;
+  background: #fff;
+  height: 256px;
+  box-shadow: 0 0 5px #eee;
+  margin-bottom:20px;
+
+}
+
+.selectImageItem-img {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 240px;
+  height: 240px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -120px -120px;
+  display: flex;
+  flex-direction: row;
+}
+
+.modal-content {
+  margin: 45px auto;
+  width: 150px;
+  height: 150px;
+  border: 2px solid #458fff;
+  border-radius: 150px;
+  text-align: center;
+}
+.score{
+  margin-top: 48px;
+  font-size: 44px;
+  height: 44px;
+  line-height: 44px;
+  color: #458fff;
+}
+.score-icon{
+  font-size: 16px;
+}
+.percent{
+  margin-top: 5px;
+  color: #999;
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.btn-cancel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  width: 15px;
+  height: 15px;
+}

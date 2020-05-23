@@ -1,0 +1,53 @@
+<view class="page-preview">
+	<view class="{{focusInput ? 'forcus-conent' : 'forcus-conent hidden'}}">
+		<view class="forcus-input">
+			<input focus="{{focusInput}}" bindconfirm="videoSrcConfirm" placeholder="粘贴或扫码从平台获取的直播地址" />
+		</view>
+		<view class="cancel-focus">
+				<text catchtap="cancelFocus" >取消</text>
+		</view>
+	</view>
+	<view class="{{!focusInput ? 'content' : 'content hidden'}}">
+		<view class="{{objectFit ? 'hidden' : '' }}">
+			<view class="serial-channel">添加直播地址</view>
+			<view class="add-device">
+				<input class="input token" value="{{videoSrc}}" onfocus="onFocus" bindinput="videoSrcInput" placeholder="如：rtmp://rtmp01open.ys7.com/openlive/f01018a141094b7fa138b9d0b856507b" />
+				<view>
+					<image class="scan" catchtap="tapScan" src="./images/saomiao.png"></image>
+				</view>
+				<view class="serial-hint">支持RTMP/FLV协议的直播地址播放</view>
+			</view>
+		</view>
+
+		<live-player class="video-item {{objectFit ? 'fill' : 'normal'}}" id="previewPlayer" binderror="error" bindstatechange="statechange" mode="RTC" src="{{videoSrc}}" autoplay="true" catchtap="onVideoTap" muted="{{!openSound}}" object-fit="{{objectFitValue}}">
+			<!-- 竖屏模式 -->
+			<cover-view class="{{(fullScreen || objectFit)  ? 'hidden' : ''}} video-controls-container">
+				<cover-image class="controls-img" ontap="fullScreen" src="./images/video_icon_full.png"></cover-image>
+			</cover-view>
+			<!-- 横屏模式 -->
+			<cover-view class="{{!fullScreen ? 'hidden' : '' }}' video-back-container" ontap="unfullScreen">
+				<cover-image class="back-img" src="./images/nav_icon_back_full.png"></cover-image>
+			</cover-view>
+			<cover-view class="{{(!fullScreen || !showVideoControls) ? 'hidden' : '' }}' video-controls-container full">
+				<cover-image class="controls-img" src='{{playVideo ? "./images/live_icon_stop_full.png":"./images/live_icon_play_full.png"}}' ontap="handlePlay"></cover-image>
+				<cover-image class="controls-img" src='{{!openSound ? "./images/live_icon_unsound_full.png":"./images/live_icon_sound_full.png"}}' ontap="handleSound"></cover-image>
+				<cover-image class="controls-img" catchtap="changeObjectFitValue" src="./images/live_icon_adapt_full.png"></cover-image>
+			</cover-view>
+			<!-- 竖屏适应模式 -->
+			<cover-view class="{{!objectFit ? 'hidden' : '' }}' video-back-container" catchtap="cancelObjectFit">
+				<cover-image class="back-img" src="./images/nav_icon_back_full.png"></cover-image>
+			</cover-view>
+			<cover-view class="{{!objectFit ? 'hidden' : '' }}' video-controls-container full">
+				<cover-image class="controls-img" src='{{playVideo ? "./images/live_icon_stop_full.png":"./images/live_icon_play_full.png"}}' ontap="handlePlay"></cover-image>
+				<cover-image class="controls-img" src='{{!openSound ? "./images/live_icon_unsound_full.png":"./images/live_icon_sound_full.png"}}' ontap="handleSound"></cover-image>
+				<cover-image class="controls-img" catchtap="changeObjectFitValue" src="./images/live_icon_adapt_full.png"></cover-image>
+			</cover-view>
+		</live-player>
+
+		<view class="{{objectFit ? 'hidden' : '' }}' video-controls">
+			<image class="video-controls-img" catchtap="handlePlay" src="{{ !playVideo ? './images/live_play.png': './images/live_stop.png'}}"></image>
+			<image class="video-controls-img" catchtap="handleToggleSound" src="{{ openSound ? './images/live_sound.png': './images/live_unSound.png'}}"></image>
+			<image class="video-controls-img" catchtap="setObjectFit" src="./images/live_adapt.png"></image>
+		</view>
+	</view>
+</view>

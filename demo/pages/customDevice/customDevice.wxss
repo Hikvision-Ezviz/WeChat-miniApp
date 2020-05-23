@@ -1,0 +1,74 @@
+.page-custom-device {
+  padding: 30px;
+}
+.page-custom-device .serial-channel {
+  font-size: 16px;
+  color: #333333;
+  letter-spacing: 0;
+  line-height: 22px;
+  margin:10px 0;
+}
+.page-custom-device input {
+  height: 22px;
+  padding: 10px 4px;
+  font-size: 16px;
+  /* color: #CCCCCC; */
+  letter-spacing: 0;
+  line-height: 22px;
+  border-bottom: 1px solid #DEDEDE;
+  position: relative;
+}
+.page-custom-device input::before {
+  content: '.';
+  height:18px;
+  color: #fff;
+  width:1px;
+  border-left: 2px solid #CCCCCC;
+  position: absolute;
+  left: 0px;
+  top:13px;
+}
+.page-custom-device .serial-hint {
+  font-size: 12px;
+  color: #999999;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: 10px;
+}
+.token-label {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #333333;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+.token-hint {
+  font-size: 12px;
+  color: #999999;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: 10px;
+}
+.btn {
+  box-shadow: 0 5px 21px 0 rgba(0,0,0,0.05);
+  height: 46px;
+  line-height: 46px;
+  font-size: 16px;
+  border-radius: 8px;
+  color: #FFFFFF;
+}
+.btn.primary {
+    background: #4C80F7;
+}
+.btn.disabled {
+  background: #DEDEDE;
+}
+.page-custom-device {
+    height: calc(100vh - 100px);
+}
+.page-custom-device .btn {
+  position: absolute;
+  bottom: 46px;
+  width: 315px;
+}

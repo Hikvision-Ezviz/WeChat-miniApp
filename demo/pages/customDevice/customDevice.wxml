@@ -1,0 +1,9 @@
+<view class="page-custom-device">
+  <view class="serial-channel">设备序列号：通道号</view>
+  <input class="input serial" maxlength="11" placeholder="如：123456789:1" bindinput="deviceInput" bindblur="deviceBlur" />
+  <view class="serial-hint">请粘贴从平台获取的设备序列号与通道号</view>
+  <view class="token-label">AccessToken</view>
+  <input class="input token" maxlength="64" bindinput="tokenInput" bindblur="tokenBlur" placeholder="如：xxxxxx" />
+  <view class="token-hint">请粘贴从平台获取的AccessToken</view>
+  <button type="primary" class="{{disabled ? 'btn disabled' : 'btn primary'}}" catchtap="goToLive">完成</button>
+</view>

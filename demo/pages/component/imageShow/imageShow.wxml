@@ -1,0 +1,9 @@
+<template name="imageShow">
+  <view class="imageShow">
+    <image class="imageShowBox" bindload="__imageShow_imageLoad" src="{{imageShowUrl}}" mode="aspectFit">
+      <block wx:for="{{locations}}" wx:for-item="location">
+        <view class="imageShowCover" style="top:{{location.top}};left:{{location.left}};width:{{location.width}};height:{{location.height}}"></view>
+      </block>
+    </image>
+  </view>
+</template>

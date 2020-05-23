@@ -1,0 +1,19 @@
+<view class="page-home">
+  <view class="entrance-container">
+    <view wx:for="{{list}}" wx:key="id">
+      <view class="entrance-item">
+      <navigator url="{{item.path}}" class="{{item.disabled? 'disabled link' : 'link'}}"> 
+        <view class="entrance-imgage-container">
+          <image class="entrance-image" src="{{item.icon}}"></image>
+        </view>
+        <view class="entrance-name">{{item.name}}</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view class="company">
+    <image class="company-logo" src="./images/nav_icon_logo.png"></image>
+    <view class="company-name">萤石开放平台</view>
+  </view>
+  <view class="hint">本程序作为萤石的能力展示，由萤石开放平台提供技术支持</view>
+</view>

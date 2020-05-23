@@ -1,0 +1,21 @@
+<view class="page-experience-device">
+ <navigator class="custom-nav" url="../customDevice/customDevice"> 
+  <button class="btn" type="primary" size="default">自助设备</button>
+  
+ </navigator>
+  <view class="custom-device-hint">输入设备序列号和AccessToken即可查看</view>
+  <view class="video-title">视频</view>
+  <view class="video-container">
+    <view wx:for="{{list}}" wx:key="id">
+      <view class="video-item">
+        <navigator url="{{item.link}}">
+          <view class="video-imgage-container">
+            <image class="video-image" src="{{item.path}}"></image>
+            <image class="video-play" src="./images/home_play.png" alt="play"></image>
+          </view>
+          <view class="video-name">{{item.name}}</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

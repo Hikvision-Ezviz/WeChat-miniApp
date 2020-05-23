@@ -1,0 +1,100 @@
+<view class="container">
+  <view class="page-body">
+    <swiper indicator-dots="true" autoplay="true" interval="2000" duration="500">
+      <navigator url="../intelligence/intelligence?mode=OCR_IDCARD">
+        <swiper-item>
+          <image src="../images/banner1.jpg" mode="scaleToFill" class="swiper-item "></image>
+        </swiper-item>
+      </navigator>
+      <navigator url="../intelligence/intelligence?mode=VEHICLE_ANALYSIS_PROPS">
+        <swiper-item>
+          <image src="../images/banner2.jpg" mode="scaleToFill" class="swiper-item "></image>
+        </swiper-item>
+      </navigator>
+    </swiper>
+  </view>
+  <view class="page-body">
+    <view class="navigator-title">人脸人形</view>
+    <view class="navigator-box">
+      <navigator url="../intelligence/intelligence?mode=FACE_ANALYSIS_DETECT" class="navigator-item" hover-class="navigator-item-hover">
+        <image class="navigator-text-icon" src="../images/FACE_ANALYSIS_DETECT.png"></image>
+        <view class="navigator-text">人脸检测</view>
+      </navigator>
+      <navigator url="../faceAnalysisCompare/faceAnalysisCompare" class="navigator-item" hover-class="navigator-item-hover">
+        <image class="navigator-text-icon" src="../images/FACE_ANALYSIS_COMPARE.png"></image>
+        <view class="navigator-text">人脸比对</view>
+      </navigator>
+    </view>
+    <view class="navigator-box">
+      <navigator url="../intelligence/intelligence?mode=FACE_ANALYSIS_DETECT2" class="navigator-item" hover-class="navigator-item-hover">
+        <image class="navigator-text-icon" src="../images/FACE_ANALYSIS_DETECT2.png"></image>
+        <view class="navigator-text">人脸分析</view>
+      </navigator>
+      <navigator url="../intelligence/intelligence?mode=HUMAN_ANALYSIS_DETECT" class="navigator-item" hover-class="navigator-item-hover">
+        <image class="navigator-text-icon" src="../images/HUMAN_ANALYSIS_DETECT.png"></image>
+        <view class="navigator-text">人形检测</view>
+      </navigator>
+    </view>
+    <view class="navigator-box">
+      <navigator url="../intelligence/intelligence?mode=HUMAN_ANALYSIS_BODY" class="navigator-item" hover-class="navigator-item-hover">
+        <image class="navigator-text-icon" src="../images/HUMAN_ANALYSIS_BODY.png"></image>
+        <view class="navigator-text">人体属性</view>
+      </navigator>
+    </view>
+
+    <view class="navigator-title">文字识别</view>
+    <view class="navigator-box">
+      <navigator url="../intelligence/intelligence?mode=OCR_IDCARD" class="navigator-item" hover-class="navigator-item-hover">
+        <image class="navigator-text-icon" src="../images/OCR_IDCARD.png"></image>
+        <view class="navigator-text">身份证识别</view>
+      </navigator>
+      <navigator url="../intelligence/intelligence?mode=OCR_DRIVERLICENSE" class="navigator-item" hover-class="navigator-item-hover">
+        <image class="navigator-text-icon" src="../images/OCR_DRIVERLICENSE.png"></image>
+        <view class="navigator-text">驾驶证识别</view>
+      </navigator>
+    </view>
+    <view class="navigator-box">
+      <navigator url="../intelligence/intelligence?mode=OCR_BANKCARD" class="navigator-item" hover-class="navigator-item-hover">
+        <image class="navigator-text-icon" src="../images/OCR_BANKCARD.png"></image>
+        <view class="navigator-text">银行卡识别</view>
+      </navigator>
+      <navigator url="../intelligence/intelligence?mode=OCR_VEHICLELICENSE" class="navigator-item" hover-class="navigator-item-hover">
+        <image class="navigator-text-icon" src="../images/OCR_VEHICLELICENSE.png"></image>
+        <view class="navigator-text">行驶证识别</view>
+      </navigator>
+    </view>
+    <view class="navigator-box">
+      <navigator url="../intelligence/intelligence?mode=OCR_BUSINESSLICENSE" class="navigator-item" hover-class="navigator-item-hover">
+        <image class="navigator-text-icon" src="../images/OCR_BUSINESSLICENSE.png"></image>
+        <view class="navigator-text">营业执照识别</view>
+      </navigator>
+      <navigator url="../intelligence/intelligence?mode=OCR_GENERIC" class="navigator-item" hover-class="navigator-item-hover">
+        <image class="navigator-text-icon" src="../images/OCR_GENERIC.png"></image>
+        <view class="navigator-text">通用文字识别</view>
+      </navigator>
+    </view>
+    <!-- <view class="navigator-box">
+      <navigator url="../intelligence/intelligence?mode=OCR_RECEIPT" class="navigator-item" hover-class="navigator-item-hover">
+        <image class="navigator-text-icon" src="../images/FACE_ANALYSIS_DETECT.png"></image>
+        <view class="navigator-text">通用票据识别</view>
+      </navigator>
+    </view> -->
+    
+    <view class="navigator-title">车辆车牌</view>
+    <view class="navigator-box">
+      <navigator url="../intelligence/intelligence?mode=VEHICLE_ANALYSIS_PROPS" class="navigator-item" hover-class="navigator-item-hover">
+        <image class="navigator-text-icon" src="../images/VEHICLE_ANALYSIS_PROPS.png"></image>
+        <view class="navigator-text">车辆识别</view>
+      </navigator>
+      <navigator url="../intelligence/intelligence?mode=OCR_LICENSEPLATE" class="navigator-item" hover-class="navigator-item-hover">
+        <image class="navigator-text-icon" src="../images/OCR_LICENSEPLATE.png"></image>
+        <view class="navigator-text">车牌识别</view>
+      </navigator>
+    </view>
+
+
+  </view>
+  <view class="footer">
+    更多能力请访问桌面版：open.ys7.com
+  </view>
+</view>

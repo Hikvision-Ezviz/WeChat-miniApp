@@ -1,0 +1,41 @@
+<import src='../component/imageList/imageList.wxml' />
+
+<view class="container">
+  <view class="selectImageBox">
+    <view class="selectImageItem">
+      <image class="selectImageItem-img" src="{{imageUrl1}}" mode="aspectFit"></image>
+    </view>
+    <view class="selectImageItem">
+      <image class="selectImageItem-img" src="{{imageUrl2}}" mode="aspectFit"></image>
+    </view>
+  </view>
+  <view class="selectImageButtons">
+    <button data-id="1" bindtap='selectImageTap'>上传图片</button>
+    <button data-id="2" bindtap='selectImageTap'>上传图片</button>
+  </view>
+
+  <view class="result-title">示例图片</view>
+  <template is="imageList" data="{{...__imageList}}"></template>
+
+
+
+  <view class="beforeFooter"></view>
+  <button class="mainBtn" bindtap='startCompare'>开始对比</button>
+</view>
+
+
+
+<!--弹窗-->
+
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+
+<view class="modal-dialog" wx:if="{{showModal}}">
+
+  <image src="../images/cancel.png" class="btn-cancel" bindtap="onCancel"></image>
+  <view class="modal-content">
+    <view class="score">{{score}}<text class="score-icon">%</text></view>
+    <view class="percent">相似度</view>
+
+  </view>
+
+</view>

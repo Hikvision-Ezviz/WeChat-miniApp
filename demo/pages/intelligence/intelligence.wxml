@@ -1,0 +1,30 @@
+<import src='../component/imageShow/imageShow.wxml' />
+<import src='../component/imageList/imageList.wxml' />
+
+<view class="container">
+  <template is="imageShow" data="{{...__imageShow}}"></template>
+
+  
+  <view class="result-title">示例图片</view>
+  <template is="imageList" data="{{...__imageList}}"></template>
+
+  <view class="segmentLine" wx:if="{{words.length > 0}}">
+    <view class="segmentLineA"></view>
+    <view class="segmentLineB"></view>
+  </view>
+  
+  <view class="result-title" wx:if="{{words.length > 0}}">识别结果</view>
+  <view class="resultContainer">
+    <view class="resultBox" wx:for="{{words}}">
+      <view class="resultItem">{{item}}</view>
+    </view>
+  </view>
+
+  <view class="beforeFooter"></view>
+  <button class="mainBtn" bindtap='selectImageTap'>上传图片</button>
+
+</view>
+
+<!-- <view class="canvasContainer">
+  <canvas canvas-id="canvas" class="canvas" />
+</view> -->

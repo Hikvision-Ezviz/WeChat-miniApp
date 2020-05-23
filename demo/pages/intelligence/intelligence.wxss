@@ -1,0 +1,3 @@
+@import "../component/imageShow/imageShow.wxss";
+@import "../component/imageList/imageList.wxss";
+

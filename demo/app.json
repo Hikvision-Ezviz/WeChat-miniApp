@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/preview/preview",
+    "pages/experienceDevice/experienceDevice",
+    "pages/live/live",
+    "pages/customDevice/customDevice",
+    "pages/index/index",
+    "pages/faceAnalysisCompare/faceAnalysisCompare",
+    "pages/intelligence/intelligence"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "萤石开放平台",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

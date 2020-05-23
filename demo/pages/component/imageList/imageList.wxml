@@ -1,0 +1,12 @@
+<template name="imageList">
+<view class="__imageList_container">
+  <scroll-view class="__imageList_scroll" scroll-x="true" >
+    <block wx:for="{{images}}" wx:for-item="image">
+      <image class="__imageList_item" mode="aspectFit" bindtap="__imageList_item_tap" data-url="{{image}}" src="data:image/jpg;base64,{{image}}" ></image>
+    </block>
+    <block wx:for="{{imagesUrl}}" wx:for-item="imageUrl">
+      <image class="__imageList_item" mode="aspectFit" bindtap="__imageList_item_tap" data-url="{{imageUrl}}" src="{{imageUrl}}" ></image>
+    </block>
+  </scroll-view>
+  </view>
+</template>
