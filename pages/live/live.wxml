@@ -132,6 +132,13 @@
 		</scroll-view>
 		<button class="btn primary" disabled="{{sendingOnceVoice}}" catchtouchstart="speakStart" catchtouchend="speakEnd">{{ sendingOnceVoice ? '请稍后...' : (recoderTime === 60 ? '按住说话': '松开结束')}}</button>
 	</view>
+
+	<!-- 返回直播 -->
+	<view class="backToLiveIcon" style="position: fixed; bottom: 20rpx; right: 20rpx">
+		<button catchtap="goToLive" style="text-align: center; font-size: 14px; background: #FF8F42;padding: 8">
+			<view><cover-image class="back-img" src="./images/nav_icon_back_full.png"></cover-image>进入回放</view>
+		</button>
+	</view>
   <!-- 模态框 -->
   <mp-dialog title="{{dialogTitle}}" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
     <view>{{dialogContent}}</view>

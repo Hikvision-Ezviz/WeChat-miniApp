@@ -2,15 +2,15 @@
 //获取应用实例
 const app = getApp();
 var accessToken = '';
-const appKey = '此处填写您的appKey';
-const appSecret = '此处填写您的appSerect';
+const appKey = '26810f3acd794862b608b6cfbc32a6b8';
+const appSecret = '3155063e93f09f377eaf5ba9f321f8c2';
 Page({
   data: {
     list: [
       {
         id: 'sbmc',
         name: '测试设备AA',
-        deviceSerial: '此处填写您的设备序列号',
+        deviceSerial: '203751922',
         label: [
           "云台控制、",
           "语音播报"
@@ -20,9 +20,26 @@ Page({
       },
     ],
     accessToken: accessToken,
+    param: '',
+    url: ''
   },
-  onLoad: function () {
+  onLoad: function (options) {
     this.getAccessToken();
+    console.log('获取参数',options);
+    const { type } = options;
+    this.setData({
+      param: type
+    })
+    if (type) {
+      this.setData({
+        url: '../customDevice/customDevice?type=' + type
+      })
+    } else {
+      this.setData({
+        url: '../customDevice/customDevice'
+      })
+    }
+    
   },
   // 获取token
   getAccessToken(device){
@@ -73,10 +90,17 @@ Page({
       },
       success:(res) =>{
         console.log(res.data);
+        const { param } = this.data;
         if(res.data.code ==200 && res.data.data){
           var result = res.data.data;
           list[index].name = result.deviceName
-          list[index].link =  '/pages/live/live?accessToken=' + accessToken + '&deviceSerial=203751922&channelNo=1'
+          if (param == 'playback') {
+            list[index].link =  '/pages/playback/playback?accessToken=' + accessToken + '&deviceSerial=203751922&channelNo=1'
+            
+          } else {
+            list[index].link =  '/pages/live/live?accessToken=' + accessToken + '&deviceSerial=203751922&channelNo=1'
+          }
+          
           _this.setData({
             list: list,
             })

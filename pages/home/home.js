@@ -24,6 +24,12 @@ Page({
         icon: './images/home_icon_ai.png',
       },
       {
+        id: 'devicePlayback',
+        name: '设备回放',
+        path: '../experienceDevice/experienceDevice?type=playback',
+        icon: './images/home_icon_try.png',
+      },
+      {
         id: 'comingSoon',
         name: '敬请期待',
         path: '../comingSoon/comingSoon',

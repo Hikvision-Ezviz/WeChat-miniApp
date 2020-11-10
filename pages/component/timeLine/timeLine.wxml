@@ -1,0 +1,43 @@
+<!-- 这是自定义组件的内部WXML结构 -->
+<view class="time-line-container">
+  <view class="current-time" id="current-time-scal">
+    <view class="current-time-bg">{{current}}</view>
+  </view>
+  <view class="" >
+    <scroll-view scroll-y="true" 
+    class="time-line-item-container" 
+    scroll-top="{{scrollTop}}"
+    enhanced="true"
+    show-scrollbar="false"
+    >
+      <view
+        scroll-y="true"
+        style="height: 300px;"
+        class="time-line-item"
+        id="time-line-item"
+        enhanced="true"
+        binddragend="_binddragend"
+        bindtouchend="_binddragend"
+        bindtouchmove='_bindtouchMove'
+        disable-scroll="true"
+      >
+        <view class="time-item" wx:for="{{timeArr}}" wx:key="id" 
+          style="margin-top: {{item.marginTop}}px; padding-bottom: {{item.paddingBottom}}px; border-right-color: {{item.borderColor}};"
+        >
+          <view class="scale"></view>
+          <view class="scale"></view>
+          <view class="scale"></view>
+          <view class="scale"></view>
+          <view class="scale"></view>
+          <view class="scale" style="width: 10px"></view>
+          <!-- <view class="item-unavail" style="height: {{item.availPercent}}px; top: {{item.availTop}}px"></view> -->
+          
+          <view wx:for="{{item.recArr}}" class="item-unavail" style="height: {{item.height}}px; top: {{item.top}}px"></view>
+          <view id="{{item.label}}" style="position: relative; top: 51px; left: 40%"> {{item.current}}</view>
+          
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<slot></slot>

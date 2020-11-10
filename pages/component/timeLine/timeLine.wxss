@@ -1,0 +1,79 @@
+/* components/my-component.wxss */
+.time-line-container {
+  height: 300px;
+  /* outline: 1px solid red; */
+  /* background: gray; */
+  position: relative;
+  /* padding-top: 60px; */
+}
+
+.time-line-container  .current-time {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  height: 29px;
+  /* line-height: 58px; */
+  border-bottom: 1px solid #FF8F42;
+  width: 60%;
+  padding-left: 36%;
+}
+.time-line-container  .current-time .current-time-bg {
+  position: relative;
+  top: 15px;
+  width: 100px;
+  height: 29px;
+  line-height: 29px;
+  /* line-height: 58px; */
+  background-color: #FF8F42;
+  color: #fff;
+  text-align: center;
+  border-radius: 15px;
+}
+.time-line-container .time-line-item-container {
+  display: inline-block;
+  /* height: 400px; */
+  width: 30%;
+  /* background: indianred; */
+  overflow-y: scroll;
+  
+  /* padding-top: 60px; */
+  height: 300px;
+  box-sizing: border-box;
+  white-space: nowrap
+}
+
+.time-line-item .time-item {
+  position: relative;
+  box-sizing: border-box;
+  height: 60px;
+  font-size: 14px;
+  color: rgb(150, 150, 150);
+  border-right:  6px solid ;
+  border-right-color: #ddd;
+}
+
+.time-line-item .time-item .scale {
+  width: 6px;
+  height: 9px;
+  border-bottom: 1px solid #ccc;
+  float: right;
+  clear: both;
+}
+
+.time-line-item .time-item .item-unavail {
+  width: 6px;
+  position: absolute;
+  left: 100%;
+  background-color:#FF8F42;
+}
+
+/*隐藏滚动条*/
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.time-line-container .time-line-item-container .time-line-item{
+  height: 1200px;
+  
+}

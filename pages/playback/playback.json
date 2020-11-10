@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "timeLine": "../component/timeLine/timeLine",
+    "mp-dialog": "../component/dialog/dialog"
+  }
+}

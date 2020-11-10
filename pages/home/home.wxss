@@ -4,14 +4,15 @@
   display: flex;
   height: calc(100vh - 100px);
   outline: 1px soild gray;
-  justify-content:space-around;
+  justify-content:space-between;
   align-items: flex-start;
   align-content: flex-start;
   flex-wrap:wrap;
+  padding: 0px 8%;
 }
 .entrance-item {
   display: inline-block;
-  width: 140px;
+  width: 130px;
   height: 145px;
   text-align: center;
   background: #F5F4F4;
@@ -19,7 +20,7 @@
   margin-bottom: 15px;
 }
 .entrance-item .link {
-  width: 140px;
+  width: 130px;
   height: 145px;
 }
 .link.disabled {

@@ -23,12 +23,20 @@ Page({
         path: '../live/live?videoId=keting',
       }
     ],
-    disabled: true,
+    disabled: true, // 已修改
+    // deviceValue: '',
+    // tokenValue: '',
+    type: null,
     deviceValue: '',
-    tokenValue: '',
+    tokenValue: ''
   },
-  onLoad: function () {
-
+  onLoad: function (options) {
+    console.log('获取参数',options);
+    const { type } = options;
+    console.log(type);
+    this.setData({
+      type: type
+    })
   },
   deviceInput(event){
     console.log("event",event);
@@ -95,13 +103,20 @@ Page({
     if(this.data.disabled){
       return false;
     }
-    const { deviceValue,tokenValue } = this.data;
+    const { deviceValue,tokenValue, type } = this.data;
     let deviceSerial = deviceValue.split(':')[0];
     let channelNo = deviceValue.split(':')[1];
+    let url ;
+    if (type == 'playback') {
+      url = '/pages/playback/playback?accessToken=' + tokenValue + '&deviceSerial='+ deviceSerial + '&channelNo=' + channelNo
+    } else {
+      url = '/pages/live/live?accessToken=' + tokenValue + '&deviceSerial='+ deviceSerial + '&channelNo=' + channelNo
+    }
     wx.navigateTo({
-      url: '/pages/live/live?accessToken=' + tokenValue + '&deviceSerial='+ deviceSerial + '&channelNo=' + channelNo,
+      url: url,
     })
   },
+  
   /**
    * 用户点击右上角分享
    */

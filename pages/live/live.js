@@ -103,15 +103,24 @@ Page({
     dialogContent: '',
     buttons: [{text: '知道了'}],
     dialogShow: false,
+    pathParam: ''
   },
   onLaunch(){
     console.log(onLaunch);
   },
-  onShow (options) {
-    console.log("show")
+  onShow () {
+    console.log("show");
+    var launchOptions = wx.getLaunchOptionsSync();
+    const pathParam = launchOptions.query.scene;
+    console.log('pathParam:',pathParam);
+    this.setData({
+      pathParam: pathParam
+    });
+    if (pathParam) {
+      this.getWxaInfo();
+    }
     // Do something when show.
     this.checkNetWork();
-    this.getDeviceCoverInfo();
   },
   onHide () {
     // Do something when hide.
@@ -131,15 +140,17 @@ Page({
       scene: parseInt(scene,10) || launchOptions.scene,
       accessToken: accessToken,
       deviceSerial: deviceSerial,
-      channelNo: channelNo || '1',
+      channelNo: channelNo,
       panelStatus:0,
     });
-    this.getPlayUrl();
-    this.getDeviceInfo();
-    this.getDeviceCoverInfo();
+    if (accessToken) {
+      this.getPlayUrl();
+      this.getDeviceInfo();
+      this.getDeviceCoverInfo();
+    }
     this.setData({
       showOneButtonDialog: true
-    })
+    });
     // 录音模块
     recorderManager.onStart(() => {
       console.log('recorder start');
@@ -229,6 +240,7 @@ Page({
     //视频
     livePlayerContext = wx.createLivePlayerContext('livePlayer');
     console.log("livePlayerContext", livePlayerContext);
+    
   },
   checkNetWork(){
     const _this = this;
@@ -380,6 +392,7 @@ Page({
   */
  getDeviceCoverInfo(){
   const { accessToken, deviceSerial, channelNo } = this.data;
+  console.log(accessToken,deviceSerial,channelNo);
   var _this = this;
     wx.request({
       url: 'https://open.ys7.com/api/lapp/device/scene/switch/status',
@@ -1528,5 +1541,49 @@ authConfirm(){
       title: '小程序',
       path:  '/pages/live/live?accessToken=' + accessToken + '&deviceSerial='+ deviceSerial + '&channelNo=' + channelNo + '&scene=1007',
     }
+  },
+  // 通过二位码进入直播，通过uuid获取accessToken、deviceSerial、channelNo
+  getWxaInfo: function () {
+    const { pathParam } = this.data;
+    console.log('getWxaInfo:', pathParam)
+    wx.request({
+      url: 'https://open.ys7.com/device/getWxaInfo', //仅为示例，并非真实的接口地址
+      method: 'POST',
+      data: {
+        uuid: pathParam
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success:(res)=> {
+        console.log('通过uuid获取',res.data);
+        const res1 = res.data.data;
+        if (res1) {
+          this.setData({
+            accessToken: res1.accessToken, 
+            deviceSerial: res1.deviceSerial, 
+            channelNo: res1.channelNo
+          });
+          this.getPlayUrl();
+          this.getDeviceInfo();
+          this.getDeviceCoverInfo();
+        }
+      },
+      fail: (res)=>{
+        console.log('获取accesstoken失败');
+        // wx.showToast({
+        //   title: '网络异常',
+        //   icon: 'none'
+        // })
+      }
+    })
+  },
+  // 返回回放
+  goToLive(){
+    const { accessToken,deviceSerial, channelNo } = this.data;
+    let url = '/pages/playback/playback?accessToken=' + accessToken + '&deviceSerial='+ deviceSerial + '&channelNo=' + channelNo;
+    wx.navigateTo({
+      url: url,
+    })
   },
 })

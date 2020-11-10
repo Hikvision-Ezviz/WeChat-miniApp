@@ -333,3 +333,10 @@ button:after{display:none;}
 .hidden {
   display: none!important;
 }
+
+.back-img {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 15rpx 0rpx;
+  float: left;
+}

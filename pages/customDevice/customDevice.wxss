@@ -65,10 +65,18 @@
   background: #DEDEDE;
 }
 .page-custom-device {
+  position: relative;
     height: calc(100vh - 100px);
 }
-.page-custom-device .btn {
+.page-custom-device .item {
   position: absolute;
+  left: 0;
+  right: 0;
   bottom: 46px;
+}
+.page-custom-device .item .btn {
+  /* position: absolute;
+  bottom: 46px; */
   width: 315px;
+  margin: 0 auto;
 }

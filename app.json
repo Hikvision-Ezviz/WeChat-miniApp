@@ -7,7 +7,8 @@
     "pages/customDevice/customDevice",
     "pages/index/index",
     "pages/faceAnalysisCompare/faceAnalysisCompare",
-    "pages/intelligence/intelligence"
+    "pages/intelligence/intelligence",
+    "pages/playback/playback"
   ],
   "window": {
     "backgroundTextStyle": "light",
