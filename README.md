@@ -7,13 +7,13 @@
 
 1、微信搜索“萤石云开放平台”小程序。
 
-<img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQF1-2BnyASaHSAABzY9XhxEc143.jpg" alt="小程序-微信搜索" style="zoom:50%;" />
+<img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQF1-2BnyASaHSAABzY9XhxEc143.jpg" alt="小程序-微信搜索" style="width: 375px" />
 
 
 
 2、点击“萤石云开放平台”，进入萤石云小程序首页。
 
-<img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQFl-2Bn-AdgB2AACMcnNu1WQ319.jpg" alt="小程序-首页" style="zoom:50%;" />
+<img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQFl-2Bn-AdgB2AACMcnNu1WQ319.jpg" alt="小程序-首页" style="width: 375px" />
 
 ### 1.2 自助设备播放
 
@@ -23,44 +23,44 @@
 
 #### 1.2.1 自助设备直播
 
-1、进入萤石云小程序首页，单击 **「设用设备」**，进入试用设备页，单击 **「自助设备」**按钮。
+1、进入萤石云小程序首页，单击 **「设用设备」**，进入试用设备页，单击  **「自助设备」** 按钮。
 
-<img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQFl-2Bm-AU8mhAAD-lUrc6i0033.jpg" alt="试用设备" style="zoom:50%;" />
+<img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQFl-2Bm-AU8mhAAD-lUrc6i0033.jpg" alt="试用设备" style="width: 375px" />
 
-2、根据提示填写您的账号信息和设备信息。您可登录[萤石开放平台官网](https://open.ys7.com/console/application.html) ，在 **「控制台」**-> **「我的账号」**->**「应用信息」**获取您的accessToken，再单击 **「设备列表」**获取您的设备信息。或者您还可以通过 [HTTP接口](https://open.ys7.com/doc/zh/book/index/user.html) 获取您的accessToken。
+2、根据提示填写您的账号信息和设备信息。您可登录[萤石开放平台官网](https://open.ys7.com/console/application.html) ，在 **「控制台」**-> **「我的账号」**-> **「应用信息」** 获取您的accessToken，再单击  **「设备列表」** 获取您的设备信息。或者您还可以通过 [HTTP接口](https://open.ys7.com/doc/zh/book/index/user.html) 获取您的accessToken。
 
 - 设备序列号和通道号需按照指定格式填写。ipc设备，通道号默认为1。
 
-<img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQF1-2BneABx1UAAC99IgUEZ8066.jpg" alt="自助设备" style="zoom: 50%;" />
+<img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQF1-2BneABx1UAAC99IgUEZ8066.jpg" alt="自助设备" style="width: 375px" />
 
-3、单击 **「完成」**按钮进入设备播放页。即可体验设备实时播放，云台控制、镜像翻转，语音播报，镜头遮蔽等功能（*需要设备能力支持*）。
+3、单击  **「完成」** 按钮进入设备播放页。即可体验设备实时播放，云台控制、镜像翻转，语音播报，镜头遮蔽等功能（*需要设备能力支持*）。
 
-<img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQF1-2BnKAHKEUAAEzp94LrQk484.jpg" alt="小程序-试用设备预览" style="zoom:50%;" />
+<img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQF1-2BnKAHKEUAAEzp94LrQk484.jpg" alt="小程序-试用设备预览" style="width: 375px" />
 
 #### 1.2.2 自助设备回放
 
 如果您拥有萤石账号和萤石/海康设备，可自助进行您账号下设备回放。
 
-1、进入萤石云小程序首页，单击 **「设备回放」**，进入试用设备页，单击 **「自助设备」**按钮。
+1、进入萤石云小程序首页，单击 **「设备回放」**，进入试用设备页，单击 **「自助设备」** 按钮。
 
-<img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQFl-2Bm-AU8mhAAD-lUrc6i0033.jpg" alt="小程序-试用设备" style="zoom:50%;" />
+<img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQFl-2Bm-AU8mhAAD-lUrc6i0033.jpg" alt="小程序-试用设备" style="width: 375px" />
 
-2、根据提示填写您的账号信息和设备信息。您可登录[萤石开放平台官网](https://open.ys7.com/console/application.html) ，在 **「控制台」**-> **「我的账号」**->**「应用信息」**获取您的accessToken，再单击 **「设备列表」**获取您的设备信息。或者您还可以通过 [HTTP接口](https://open.ys7.com/doc/zh/book/index/user.html) 获取您的accessToken。
+2、根据提示填写您的账号信息和设备信息。您可登录[萤石开放平台官网](https://open.ys7.com/console/application.html) ，在 **「控制台」**-> **「我的账号」**-> **「应用信息」** 获取您的accessToken，再单击 **「设备列表」** 获取您的设备信息。或者您还可以通过 [HTTP接口](https://open.ys7.com/doc/zh/book/index/user.html) 获取您的accessToken。
 
 - 设备序列号和通道号需按照指定格式填写。ipc设备，通道号默认为1。
 
-<img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQF1-2BneABx1UAAC99IgUEZ8066.jpg" alt="自助设备" style="zoom: 50%;" />
+<img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQF1-2BneABx1UAAC99IgUEZ8066.jpg" alt="自助设备" style="width: 375px" />
 
-3、单击 **「完成」**按钮进入设备回放页。设备默认播放距当前时间最近的回放视频片段，您可滑动时间轴选取当前日期内回放时间片段进行播放。
+3、单击 **「完成」** 按钮进入设备回放页。设备默认播放距当前时间最近的回放视频片段，您可滑动时间轴选取当前日期内回放时间片段进行播放。
 
 - 您可单击时间轴上方日期选择器切换至对应日期，播放对应日期内的回放片段。
 - 设备默认播放本地SDK卡回放片段，如果您的设备开通了云存储服务，您可点击切换至云存储，播放云存储中的回放片段。
 
-<img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQFl-2BnWAHjDZAAI2pIFpiiI909.jpg" alt="小程序-设备回放" style="zoom:50%;" />
+<img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQFl-2BnWAHjDZAAI2pIFpiiI909.jpg" alt="小程序-设备回放" style="width: 375px" />
 
 4、我们提供两种方式开通云存储。
 
-- 您可登录[萤石开放平台官网](https://open.ys7.com/) 单击上侧导航栏 **「控制台」**，单击左侧导航栏 **「云存储」** ，在列表中对应设备单击 **「开通」**，开通对应设备云存储服务。
+- 您可登录[萤石开放平台官网](https://open.ys7.com/) 单击上侧导航栏 **「控制台」** ，单击左侧导航栏 **「云存储」** ，在列表中对应设备单击 **「开通」**，开通对应设备云存储服务。
 
   ![image-20201116103639079](https://resource.ys7cloud.com/group2/M00/00/52/CtwQFl-2BnqAbLFbAAM2jAUZ6XA622.png)
 
@@ -72,41 +72,41 @@
 
 #### 1.3.1 试用设备直播
 
-1、进入萤石云小程序首页，单击 **「试用设备」**按钮，进入试用设备页。
+1、进入萤石云小程序首页，单击 **「试用设备」** 按钮，进入试用设备页。
 
-<img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQFl-2Bm-AU8mhAAD-lUrc6i0033.jpg" alt="小程序-试用设备" style="zoom:50%;" />
+<img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQFl-2Bm-AU8mhAAD-lUrc6i0033.jpg" alt="小程序-试用设备" style="width: 375px" />
 
 2、试用设备列表中任选一个设备，点击播放按钮，进入试用设备直播页，体验试用设备直播功能。
 
-<img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQF1-2BoqAKHqIAAIuJmWMUjE855.jpg" alt="小程序-试用设备预览" style="zoom:50%;" />
+<img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQF1-2BoqAKHqIAAIuJmWMUjE855.jpg" alt="小程序-试用设备预览" style="width: 375px" />
 
 #### 1.3.2 试用设备回放
 
 1、进入萤石云小程序首页，单击 **「设备回放」**按钮，进入试用设备页。
 
-<img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQFl-2Bm-AU8mhAAD-lUrc6i0033.jpg" alt="小程序-试用设备" style="zoom:50%;" />
+<img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQFl-2Bm-AU8mhAAD-lUrc6i0033.jpg" alt="小程序-试用设备" style="width: 375px" />
 
 2、试用设备列表中任选一个设备，点击播放按钮，进入试用设备回放页，体验试用设备回放功能。
 
-<img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQF1-2BoSAREMEAAHQDRQ8o0w019.jpg" alt="小程序-设备回放" style="zoom:50%;" />
+<img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQF1-2BoSAREMEAAHQDRQ8o0w019.jpg" alt="小程序-设备回放" style="width: 375px" />
 
 ### 1.4  官网控制台扫描二维码进入小程序
 
-1、您可登录[萤石开放平台官网](https://open.ys7.com/console/application.html) ，单击上侧导航栏**「控制台」**，单击左侧导航栏**「设备列表」**获取您的设备小程序地址。
+1、您可登录[萤石开放平台官网](https://open.ys7.com/console/application.html) ，单击上侧导航栏 **「控制台」**，单击左侧导航栏 **「设备列表」** 获取您的设备小程序地址。
 
 <img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQF1-2BmmAXGfaAAOcZzimZqw180.png" alt="image-20201109213347064"  />
 
-2、鼠标移动设备列表中**「播放地址」**栏中的**「小程序地址」**获取对应设备的小程序二维码播放地址。离线设备将不生成设备小程序播放地址。
+2、鼠标移动设备列表中 **「播放地址」** 栏中的 **「小程序地址」** 获取对应设备的小程序二维码播放地址。离线设备将不生成设备小程序播放地址。
 
 <img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQFl-2BmWAFlJNAARMa9YRido596.png" alt="image-20201109213530834"  />
 
 3、打开手机微信，扫描二维码即可播放对应设备。
 
-4、如果您不拥有萤石/海康设备，您还可单击设备列表中**「设用设备」**按钮，获取试用设备小程序二维码。
+4、如果您不拥有萤石/海康设备，您还可单击设备列表中 **「设用设备」** 按钮，获取试用设备小程序二维码。
 
 <img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQFl-2Bo2AE6O5AAJxAdPalgk568.png" alt="image-20201109214037180"  />
 
-5、打开手机微信扫描**「小程序播放」**二维码，即可体验试用设备播放功能。
+5、打开手机微信扫描 **「小程序播放」** 二维码，即可体验试用设备播放功能。
 
 # 2. 开发指南
 
@@ -116,31 +116,31 @@
 
 ### 2.1 准备工作
 
-1、[注册微信小程序](https://developers.weixin.qq.com/miniprogram/introduction/#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%B3%A8%E5%86%8C)，在创建自己的微信小程序之前，首先需要注册小程序账号，有如下账号类型，我们选择**「小程序」**类型。请用您的企业账号完成后续注册。
+1、[注册微信小程序](https://developers.weixin.qq.com/miniprogram/introduction/#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%B3%A8%E5%86%8C)，在创建自己的微信小程序之前，首先需要注册小程序账号，有如下账号类型，我们选择 **「小程序」** 类型。请用您的企业账号完成后续注册。
 
 <img src="https://resource.ys7cloud.com/group1/M00/00/7E/CtwQEl-2HGWAIU35AACcJr3yRTw928.png" alt="image-20201110171743089" style="zoom:;" />
 
 2、下载并安装[微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html?spm=a2c4g.11186623.2.16.3e017b0bovMDZT)。
 
-3、萤石云小程序依赖微信实时音视频播放组件live-player，[根据微信实时音视频接入文档]()，您的小程序需要通过类目审核。您可登录 [微信公众平台](https://mp.weixin.qq.com/) ，在左侧单击**「设置」**，查看您的服务类目是否为live-player组件支持的小程序服务类目。您可点击右侧**「详情」**进行服务类目添加。
+3、萤石云小程序依赖微信实时音视频播放组件live-player，[根据微信实时音视频接入文档]()，您的小程序需要通过类目审核。您可登录 [微信公众平台](https://mp.weixin.qq.com/) ，在左侧单击 **「设置」**，查看您的服务类目是否为live-player组件支持的小程序服务类目。您可点击右侧 **「详情」** 进行服务类目添加。
 
 ![](https://resource.ys7cloud.com/group1/M00/00/7E/CtwQE1-2LUiAPaZuAADCATRw7bE241.png)
 
-您可登录[微信公众平台](https://mp.weixin.qq.com/)，在左侧导航栏单击**「开发」**，然后单击**「接口设置」**，自助开通该组件权限。
+您可登录[微信公众平台](https://mp.weixin.qq.com/)，在左侧导航栏单击 **「开发」**，然后单击 **「接口设置」** ，自助开通该组件权限。
 
 <img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQF1-2BkCANiO5AAEeZ82ePOU707.png" alt="image-20201110110042088"  />
 
-4、在微信小程序中请求萤石开放平台API时，需预先设置通讯域名，小程序只可以和指定的域名进行网络通讯。您可以登录[微信公众平台](https://mp.weixin.qq.com/)，在左侧导航栏单击**「开发」**，然后单击**「开发设置」**，在**「服务器域名」** 区域，单击 **「修改」**，进行配置。
+4、在微信小程序中请求萤石开放平台API时，需预先设置通讯域名，小程序只可以和指定的域名进行网络通讯。您可以登录[微信公众平台](https://mp.weixin.qq.com/)，在左侧导航栏单击 **「开发」**，然后单击 **「开发设置」**，在 **「服务器域名」** 区域，单击 **「修改」**，进行配置。
 
 <img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQF1-2BlCAN7VwAAD6W9QxxVY156.png" alt="image-20201110142009537"  />
 
-5、开发小程序直播、回放功能需要萤石/海康设备支持，您需要登录[萤石开放平台官网](https://open.ys7.com/console/application.html) ，单击上侧导航栏**「控制台」**，单击左侧**「设备列表」**，再单击**「添加设备」**按钮，输入设备序列号和设备验证码，完成您账号下设备的添加。
+5、开发小程序直播、回放功能需要萤石/海康设备支持，您需要登录[萤石开放平台官网](https://open.ys7.com/console/application.html) ，单击上侧导航栏 **「控制台」**，单击左侧 **「设备列表」**，再单击 **「添加设备」** 按钮，输入设备序列号和设备验证码，完成您账号下设备的添加。
 
 - 海康设备可以参考[设备接入指南](https://open.ys7.com/bbs/article/34) 进行账号下设备添加。
 
 <img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQFl-2BoeAYFwKAAMCQUYHIpg801.png" alt="image-20201110144754527"  />
 
-如果您还未注册[萤石开放平台官网](https://open.ys7.com/console/application.html) 账号，需要先单击上侧导航栏**「注册」**，根据提示步骤注册成为萤石开放平台开发者。注册成功后重新登录萤石开放平台官网 ，单击上侧导航栏**「控制台」**，单击左侧**「设备列表」**，再单击**「添加设备」**按钮，输入设备序列号和设备验证码，完成您账号下设备的添加。
+如果您还未注册[萤石开放平台官网](https://open.ys7.com/console/application.html) 账号，需要先单击上侧导航栏 **「注册」**，根据提示步骤注册成为萤石开放平台开发者。注册成功后重新登录萤石开放平台官网 ，单击上侧导航栏 **「控制台」**，单击左侧 **「设备列表」**，再单击 **「添加设备」** 按钮，输入设备序列号和设备验证码，完成您账号下设备的添加。
 
 - 萤石开放平台的 [控制台](https://open.ys7.com/console/resource.html) 为开发者提供了我的设备、账户资源、流量明细、账单明细、我的应用、账号信息、工单系统、云存储、数据分析、电话提醒服务等功能。登录账号后可在控制台中进行操作。
 
@@ -150,14 +150,14 @@
 
 1、完成前期准备工作后，您可以单击 [这里](https://github.com/Hikvision-Ezviz/WeChat-miniApp) 下载小程序示例项目。
 
-2、打开下载的微信开发者工具，微信扫描二维码登录您注册的小程序账号。单击**「导入项目」**按钮，单击目录右侧**「下拉」**选择下载的小程序示例项目，输入您的**AppID**后，单击**「导入」**按钮。
+2、打开下载的微信开发者工具，微信扫描二维码登录您注册的小程序账号。单击 **「导入项目」** 按钮，单击目录右侧 **「下拉」** 选择下载的小程序示例项目，输入您的**AppID**后，单击 **「导入」** 按钮。
 
 - **AppID**：输入微信小程序的App ID。
 - 登录[微信公众平台](https://mp.weixin.qq.com/)，在**开发设置**页面查看App ID。
 
 <img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQF1-2BleANZtYAABtDYhMPm0324.png" alt="image-20201110154157407"  />
 
-3、进入小程序示例项目中，单击**「模拟器」**按钮，可模拟进行调试，也可以单击**「真机调试」**按钮，单击**「编译并自动调试」**，登录您小程序账号的微信会自动打开您需要调试的小程序。
+3、进入小程序示例项目中，单击 **「模拟器」** 按钮，可模拟进行调试，也可以单击 **「真机调试」** 按钮，单击 **「编译并自动调试」**，登录您小程序账号的微信会自动打开您需要调试的小程序。
 
 <img src="https://resource.ys7cloud.com/group2/M00/00/52/CtwQFl-2Bl2ASgZsAAIp7KpyE5A411.png" alt="image-20201110155332172"  />
 
@@ -373,7 +373,7 @@ Page({
 
 1、登录 [萤石云开放平台官网](https://open.ys7.com/) 。
 
-2、单击上侧导航栏**「控制台」**，单击左侧**「我的账号」**，再单击**「应用信息」**，即可在应用信息页面获取您的AccessToken。
+2、单击上侧导航栏 **「控制台」**，单击左侧 **「我的账号」**，再单击 **「应用信息」**，即可在应用信息页面获取您的AccessToken。
 
 **服务端**
 
